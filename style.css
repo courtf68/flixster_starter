@@ -1,1 +1,27 @@
+body {
+  background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+}
 
+h1 {
+  color: aliceblue;
+  padding-left: 835px;
+}
+
+#looky {
+  float: right;
+  margin-top: 46px;
+  font-size: large;
+}
+
+#top {
+  display: flex;
+  justify-content: space-between;
+}
+#query {
+  padding: 3.5px;
+}
+#submit {
+  font-size: large;
+  color: #515ada;
+  cursor: pointer;
+}
