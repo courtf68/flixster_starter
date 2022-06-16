@@ -20,8 +20,27 @@ h1 {
 #query {
   padding: 3.5px;
 }
-#submit {
+/* #submit { */
+button {
   font-size: large;
   color: #515ada;
+  cursor: pointer;
+}
+
+#movie-grid {
+  display: flex;
+  /* flex: 5; */
+  flex: 20% 20% 20% 20% 20%;
+  /* justify-content: space-around; */
+}
+
+#movie-grid img {
+  height: 250px;
+}
+h3 {
+}
+
+img:hover {
+  opacity: 0.2;
   cursor: pointer;
 }
