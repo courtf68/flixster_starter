@@ -60,3 +60,5 @@ window.onload = () => {
   //arrow bc multiple
   NowP();
 };
+
+//name "q" needs to be in event listener form ting
