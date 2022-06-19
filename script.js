@@ -1,14 +1,13 @@
 const api_key = "0522034165f29fe2c0404b02abc42f40";
 const star = "&#10032;";
-const searchterm = "";
-const search = document.getElementById("query"); //searxch box
+const searchT = document.getElementById("query"); //searxch box
 const theForm = document.getElementById("looky"); //my form
 const press = document.getElementById("submit"); //button
 const dataSec = document.querySelector(".page"); //where dat goes
 const title = document.getElementById("Ptitle"); //changing title of screen
 
 const url = `https://api.themoviedb.org/3/movie/550?api_key=${api_key}`;
-const movieSearchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=${searchterm}&page=1&include_adult=false`;
+const movieSearchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=${searchT}&page=1&include_adult=false`;
 
 //https://api.themoviedb.org/3/movie/550?api_key=0522034165f29fe2c0404b02abc42f40
 
@@ -68,14 +67,21 @@ async function NowP() {
 async function handleFormSubmit(event) {
   event.preventDefault();
   dataSec.innerHTML = ""; //clearing
+  title.innerHTML = "Search Results";
 }
 
 async function Searchy() {
   const response = await fetch(movieSearchUrl);
-  const data = await response.json; //VS said no await needed
-  console.log(data);
-  return data;
+  const datay = await response.json; //VS said no await needed
+  console.log(datay);
+  displayResults(datay.results);
 }
+
+// function displayResults(data) {
+//   const movStr = data.results.map(
+//     (movie) => ` <div class="movie-votes"> ${star}${movie.vote_average}</div>`
+//   );
+// }
 
 press.addEventListener("click", handleFormSubmit);
 

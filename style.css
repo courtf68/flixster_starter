@@ -6,7 +6,9 @@ h1 {
   color: aliceblue;
   padding-left: 835px;
 }
-
+/* * {
+  border: 2px dotted #515ada;
+} */
 #looky {
   float: right;
   margin-top: 46px;
@@ -37,17 +39,25 @@ button {
 /* justify-content: space-around; */
 /* } */
 
-.page {
+/* .page {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 5px;
-}
+} */
 
+#movie-grid {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+/* 
 #movie-card {
   display: flex;
   flex-direction: column-reverse;
-}
+} */
 
 #movie-grid img {
   height: 250px;
@@ -55,7 +65,7 @@ button {
 
 h3,
 .movie-votes {
-  margin: 5%;
+  margin: 2%;
   width: var(--poster-base);
 }
 
