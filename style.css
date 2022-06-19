@@ -25,19 +25,38 @@ button {
   font-size: large;
   color: #515ada;
   cursor: pointer;
+  /* align-items: center; */
 }
 
-#movie-grid {
+/* #movie-card {
   display: flex;
   /* flex: 5; */
-  flex: 20% 20% 20% 20% 20%;
-  /* justify-content: space-around; */
+/* flex-wrap: wrap; */
+/* justify-content: space-evenly; */
+/* padding: 10px; */
+/* justify-content: space-around; */
+/* } */
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+}
+
+#movie-card {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 #movie-grid img {
   height: 250px;
 }
-h3 {
+
+h3,
+.movie-votes {
+  margin: 5%;
+  width: var(--poster-base);
 }
 
 img:hover {
