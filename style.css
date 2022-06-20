@@ -61,6 +61,7 @@ button {
 
 #movie-grid img {
   height: 250px;
+  border: 2px solid #efd5ff;
 }
 
 /* h3,

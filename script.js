@@ -71,7 +71,7 @@ async function Searchy(tempS) {
   );
   const datay = await response.json; //VS said no await needed
   console.log(datay);
-  displayResults(datay.results);
+  displayResults(datay);
 }
 
 // function displayResults(data) {
@@ -84,7 +84,7 @@ press.addEventListener("click", doSubmit);
 
 theForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  let tempS = event.target.searchT.q;
+  let tempS = event.target.q.value;
   console.log(tempS);
   // tempS = tempS.replace(/ /g, "+");
   Searchy(tempS);
