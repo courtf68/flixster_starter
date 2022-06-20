@@ -53,15 +53,23 @@ button {
   /* align-items: center; */
   flex-wrap: wrap;
 }
-/* 
-#movie-card {
-  display: flex;
-  flex-direction: column-reverse;
-} */
 
 #movie-grid img {
   height: 250px;
   border: 2px solid #efd5ff;
+}
+
+.searchSection {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+
+#to {
+  display: flex;
+  justify-content: space-between;
 }
 
 .hidden {
