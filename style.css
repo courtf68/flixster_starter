@@ -63,11 +63,11 @@ button {
   height: 250px;
 }
 
-h3,
+/* h3,
 .movie-votes {
   margin: 2%;
   width: var(--poster-base);
-}
+} */
 
 img:hover {
   opacity: 0.2;
