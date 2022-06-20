@@ -6,6 +6,7 @@ const theForm = document.getElementById("looky"); //my form
 const press = document.getElementById("submit"); //button
 const dataSec = document.querySelector(".page"); //where data goes
 const title = document.getElementById("Ptitle"); //changing title of screen
+const searchSection = document.querySelector(".searchSection");
 
 const url = `https://api.themoviedb.org/3/movie/550?api_key=${api_key}`;
 //const movieSearchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=${searchT}&page=1&include_adult=false`;
@@ -41,6 +42,27 @@ function displayResults(data) {
     .join("");
   dataSec.innerHTML = dataSec.innerHTML + movStr;
 }
+
+function displayResults1(data) {
+  const movStr = data.results
+    .map(
+      (movie) => `
+     
+     
+<div id = "movie-card"> 
+
+    <img class = "movie-poster" src="https://www.themoviedb.org/t/p/w440_and_h660_face${movie.poster_path}" />
+   
+    <div class="movie-votes"> ${star}${movie.vote_average}</div>
+    <h3 class = "movie-title">${movie.title} </h3>
+  
+    </div>
+    </div>
+`
+    )
+    .join("");
+  searchSection.innerHTML = searchSection.innerHTML + movStr;
+}
 //template strs, DS is my empty div
 //let movieIn = dataSec.innerHTML; //how do i call movie--> ${movie_id}
 
@@ -61,7 +83,7 @@ async function NowP() {
 //attempting search func ++
 
 async function doSubmit(event) {
-  dataSec.innerHTML = ""; //clearing
+  // dataSec.innerHTML = ""; //clearing
   title.innerHTML = "Search Results";
 }
 
@@ -69,10 +91,12 @@ async function Searchy(tempS) {
   const response = await fetch(
     `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=${tempS}&page=1&include_adult=false`
   );
-  const datay = await response.json; //VS said no await needed
+  const datay = await response.json(); //VS said no await needed
   console.log(datay);
-  displayResults(datay);
+  displayResults1(datay);
 }
+
+//back button, set search to hidden and run now playing again
 
 // function displayResults(data) {
 //   const movStr = data.results.map(
@@ -80,14 +104,17 @@ async function Searchy(tempS) {
 //   );
 // }
 
-press.addEventListener("click", doSubmit);
+// press.addEventListener("click", doSubmit);
 
 theForm.addEventListener("submit", async (event) => {
   event.preventDefault();
+  dataSec.style.display = "none";
   let tempS = event.target.q.value;
   console.log(tempS);
   // tempS = tempS.replace(/ /g, "+");
   Searchy(tempS);
+  console.log(searchSection);
+  console.log(dataSec);
 });
 
 window.onload = () => {
