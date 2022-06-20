@@ -8,13 +8,11 @@ const press = document.getElementById("submit"); //button
 const dataSec = document.querySelector(".page"); //where data goes
 const title = document.getElementById("Ptitle"); //changing title of screen
 const searchSection = document.querySelector(".searchSection");
-const home = document.getElementById("home");
+const home = document.getElementById("close-search-btn");
 const load = document.getElementById("load-more-movies-btn");
 
 const url = `https://api.themoviedb.org/3/movie/550?api_key=${api_key}`;
 //const movieSearchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=${searchT}&page=1&include_adult=false`;
-
-//https://api.themoviedb.org/3/movie/550?api_key=0522034165f29fe2c0404b02abc42f40
 
 //const movTitlUrl = `https://api.themoviedb.org/3/movie/550?api_key=${api_key}&append_to_response=${movie_id}`;
 
@@ -48,7 +46,8 @@ function displayResults(data) {
 
 load.addEventListener("click", async (event) => {
   event.preventDefault();
-  page++;
+  num++;
+  Searchy(tempS);
 });
 
 function displayResults1(data) {
@@ -82,20 +81,9 @@ async function NowP() {
   );
   const jsonres = await res.json();
   console.log(jsonres);
-  //   const movies = jsonres.results.map((movie) => {
-  //     title: movie.title;
-  //     backdropPath: movie.backdrop_path;
-  //   });
-  //   console.log(movies);
+
   displayResults(jsonres);
 }
-
-//attempting search func ++
-
-// async function doSubmit(event) {
-//   // dataSec.innerHTML = ""; //clearing
-//   title.innerHTML = "Search Results";
-// }
 
 async function Searchy(tempS) {
   const response = await fetch(
@@ -109,7 +97,7 @@ async function Searchy(tempS) {
 //back button, set search to hidden and run now playing again
 home.addEventListener("click", async (event) => {
   searchSection.style.display = "none";
-  title.innerHTML = "Now Playing";
+  title.innerHTML = "Now playing";
   NowP();
   dataSec.style.display = "initial";
 });
@@ -137,5 +125,3 @@ window.onload = () => {
   //arrow bc multiple
   NowP();
 };
-
-//name "q" needs to be in event listener form ting
