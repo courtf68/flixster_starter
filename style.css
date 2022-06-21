@@ -19,7 +19,7 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-#query {
+#search-input {
   padding: 3.5px;
 }
 /* #submit { */
@@ -46,7 +46,7 @@ button {
   padding: 5px;
 } */
 
-#movie-grid {
+#movies-grid {
   display: flex;
   justify-content: space-around;
   align-content: center;
@@ -54,7 +54,7 @@ button {
   flex-wrap: wrap;
 }
 
-#movie-grid img {
+#movies-grid img {
   height: 250px;
   border: 2px solid #efd5ff;
 }

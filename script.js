@@ -2,7 +2,7 @@ const api_key = "0522034165f29fe2c0404b02abc42f40";
 const star = "&#10032;";
 
 const num = 1;
-const searchT = document.getElementById("query"); //searxch box
+const searchT = document.getElementById("search-input"); //searxch box
 const theForm = document.getElementById("looky"); //my form
 const press = document.getElementById("submit"); //button
 const dataSec = document.querySelector(".page"); //where data goes
