@@ -40,13 +40,9 @@ Deployed Application (optional): [Flixster Deployed Site](https://courtf68.githu
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
-
 `<iframe src="https://drive.google.com/file/d/1y_SHTz4wD0tCSeuyKyzYMgUdeqTFMLiq/preview" width="640" height="480"></iframe>`
 
 <iframe src="https://drive.google.com/file/d/1y_SHTz4wD0tCSeuyKyzYMgUdeqTFMLiq/preview" width="640" height="480"></iframe>
-
-`https://drive.google.com/file/d/1y_SHTz4wD0tCSeuyKyzYMgUdeqTFMLiq/view`
 
 ### Reflection
 
