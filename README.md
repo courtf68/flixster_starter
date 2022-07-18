@@ -17,7 +17,7 @@ Deployed Application (optional): [Flixster Deployed Site](https://courtf68.githu
   - Title - the element should have a class of `movie-title`
   - Image - the `img` element should have a class of `movie-poster`
   - Votes - the element should have a class of `movie-votes`
-- [*close*] User can load more current movies by clicking a button at the bottom of the list
+- [x] User can load more current movies by clicking a button at the bottom of the list
   - The button should have an id of `load-more-movies-btn`.
   - When clicked, the page should not refresh.
   - New movies should simply be added to the bottom
@@ -36,13 +36,15 @@ Deployed Application (optional): [Flixster Deployed Site](https://courtf68.githu
 - [ ] Allow user to view more details about a movie within a popup.
 - [x] Improve the user experience through CSS & animation.
 - [ ] Allow movie video trailers to be played using [embedded YouTube](https://support.google.com/youtube/answer/171780?hl=en)
-- [ ] Implement anything else that you can get done to improve the app functionality!
+- [x] Implement anything else that you can get done to improve the app functionality!
 
 ### Walkthrough Video
 
+<!--
 `<iframe src="https://drive.google.com/file/d/1y_SHTz4wD0tCSeuyKyzYMgUdeqTFMLiq/preview" width="640" height="480"></iframe>`
 
-<iframe src="https://drive.google.com/file/d/1y_SHTz4wD0tCSeuyKyzYMgUdeqTFMLiq/preview" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1y_SHTz4wD0tCSeuyKyzYMgUdeqTFMLiq/preview" width="640" height="480"></iframe> -->
+<div style="position: relative; padding-bottom: 55.46875%; height: 0;"><iframe src="https://www.loom.com/embed/40f0e78c914a48efbb685e95b2a708e0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### Reflection
 

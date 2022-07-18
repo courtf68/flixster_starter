@@ -1,7 +1,7 @@
 const api_key = "0522034165f29fe2c0404b02abc42f40";
 const star = "&#10032;";
 
-const num = 1;
+var num = 1;
 const searchT = document.getElementById("search-input"); //searxch box
 const theForm = document.getElementById("looky"); //my form
 const press = document.getElementById("submit"); //button
@@ -15,7 +15,7 @@ const url = `https://api.themoviedb.org/3/movie/550?api_key=${api_key}`;
 //const movieSearchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=${searchT}&page=1&include_adult=false`;
 
 //const movTitlUrl = `https://api.themoviedb.org/3/movie/550?api_key=${api_key}&append_to_response=${movie_id}`;
-
+const nowPUrl = `https://api.themoviedb.org/3/movie/now_playing`;
 async function getData() {
   const response = await fetch(url);
   const dataa = response.json; //VS said no await needed
@@ -44,11 +44,11 @@ function displayResults(data) {
   dataSec.innerHTML = dataSec.innerHTML + movStr;
 }
 
-load.addEventListener("click", async (event) => {
-  event.preventDefault();
-  num++;
-  Searchy(tempS);
-});
+// load.addEventListener("click", async (event) => {
+//   event.preventDefault();
+//   num++;
+//   Searchy(tempS);
+// });
 
 function displayResults1(data) {
   const movStr = data.results
@@ -119,8 +119,18 @@ theForm.addEventListener("submit", async (event) => {
   Searchy(tempS);
   console.log(searchSection);
   console.log(dataSec);
+  searchT.value = "";
+  // num++;
 });
 
+async function handleShowMeMoreClick(event) {
+  event.preventDefault();
+  num++;
+  const res = await NowP();
+  console.log(res);
+  displayResults1(res);
+}
+load.addEventListener("click", handleShowMeMoreClick);
 window.onload = () => {
   //arrow bc multiple
   NowP();
